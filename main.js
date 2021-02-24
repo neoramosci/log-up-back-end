@@ -11,12 +11,39 @@ const user3 = 'anthony@codeimmersives.com';
 const password3 = 'like a BOSS';
 
 
-// **YOUR** code below. Pass those tests!
+// **YOUR** code below. Pass those tests! 
 
+function isValidEmail(str){
+if (str.endsWith('@codeimmersives.com') && str[0] !== '@' ){
+  return true;
+} else {
+  return false;
+}
+}
 
+function isValidPassword(str){
+  if (str.length >= 8 && str !== str.toUpperCase() && str !== str.toLowerCase()){
+    return true;
+  } else {
+    return false;
+  }
+}
 
+function isRegisteredUser(str){
+if (str === user1 || str === user2 || str === user3){
+  return true;
+  } else{
+  return false;
+  }
+}
 
-
+function passwordMatches(email,password){
+if(email === user1 && password === password1 || email === user2 && password === password2 || email === user3 && password === password3){
+    return true;
+  } else{
+    return false;
+  }
+}
 
 // Our code below. Do not touch!
 
